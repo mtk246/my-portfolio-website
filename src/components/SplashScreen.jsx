@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { CgSun } from "react-icons/cg";
 import { HiMoon } from "react-icons/hi";
-import Nav from "./Nav";
+import Banner from "./Banner";
 
 const Toggle = styled.button`
   background-color: ${(props) => props.theme.titleColor};
@@ -19,6 +19,7 @@ const Container = styled.div``;
 
 const Title = styled.h1`
   color: ${(props) => props.theme.titleColor};
+  ${"" /* className="transition duration-200 ease-in-out" */}
 `;
 
 const TagLine = styled.span`
@@ -44,7 +45,7 @@ export default function Splash(props) {
     );
 
   return (
-    <Page className="flex justify-center items-center h-screen w-full transition duration-200 ease-in">
+    <Page className="flex w-full transition duration-200 ease-in">
       <Container className="flex flex-col items-center">
         <Toggle
           onClick={changeTheme}
@@ -52,12 +53,8 @@ export default function Splash(props) {
         >
           {icon}
         </Toggle>
-        <Title className="transition duration-200 ease-in-out">
-          Hello World
-        </Title>
-        <TagLine>This is dark mode testing.</TagLine>
-        <Nav />
       </Container>
+      <Banner />
     </Page>
   );
 }
