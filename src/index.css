@@ -1,10 +1,6 @@
 /* ./src/index.css */
 
 @tailwind base;
-#toggle:checked~.toggle-dot {
-    @apply translate-x-3;
-}
-
 @tailwind components;
 @tailwind utilities;
 @layer base {
