@@ -1,5 +1,17 @@
 /* ./src/index.css */
 
 @tailwind base;
+#toggle:checked~.toggle-dot {
+    @apply translate-x-3;
+}
+
 @tailwind components;
 @tailwind utilities;
+@layer base {
+    h1 {
+        @apply text-2xl;
+    }
+    h2 {
+        @apply text-xl;
+    }
+}
