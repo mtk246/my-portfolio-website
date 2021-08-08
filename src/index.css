@@ -11,3 +11,9 @@
         @apply text-xl;
     }
 }
+
+@media(max-width:768px) {
+    .list-navbar {
+        display: none;
+    }
+}

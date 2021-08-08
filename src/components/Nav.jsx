@@ -1,35 +1,64 @@
-import { Navbar, Container, NavDropdown } from "react-bootstrap";
+import React, { useState } from "react";
+import { H1, ButtonDiv } from "./const";
+import { Collapse, Button, CardBody, Card } from "reactstrap";
+import MenuOutlinedIcon from "@material-ui/icons/MenuOutlined";
+import styled from "styled-components";
 
-export default function Nav() {
+const CardBodyUl = styled.ul`
+  background-color: ${(props) => props.theme.tagLineColor};
+`;
+
+const NormalText = styled.li`
+  color: ${(props) => props.theme.normalTextColor};
+  padding: 0 0.5rem;
+  margin: 0.5rem 0;
+  transition: 0.5s ease;
+`;
+
+const NormalText2 = styled.li`
+  color: ${(props) => props.theme.headingTextColor};
+  padding: 0 0.5rem;
+  margin: 0.5rem 0;
+  transition: 0.5s ease;
+`;
+
+const Nav = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          <Nav>
-            <Nav.Link href="#">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <nav className="w-full flex justify-around font-semibold pt-8">
+      <H1 className="font-extrabold">MTK</H1>
+      <ButtonDiv className="md:hidden sm:flex w-12 h-12 rounded-full">
+        <Button color="none" onClick={toggle} style={{ margin: 0 }}>
+          <MenuOutlinedIcon />
+        </Button>
+        <Collapse isOpen={isOpen}>
+          <Card style={{ border: "none", backgroundColor: "transparent" }}>
+            <CardBody>
+              <CardBodyUl className="block text-lg float-right w-max px-14 py-5 rounded-xl">
+                <NormalText>Home</NormalText>
+                <NormalText>About</NormalText>
+                <NormalText>Skills</NormalText>
+                <NormalText>Work</NormalText>
+                <NormalText>Contact</NormalText>
+              </CardBodyUl>
+            </CardBody>
+          </Card>
+        </Collapse>
+      </ButtonDiv>
+      <div className="list-navbar">
+        <CardBodyUl className="flex text-lg bg-transparent">
+          <NormalText2>Home</NormalText2>
+          <NormalText2>About</NormalText2>
+          <NormalText2>Skills</NormalText2>
+          <NormalText2>Work</NormalText2>
+          <NormalText2>Contact</NormalText2>
+        </CardBodyUl>
+      </div>
+    </nav>
   );
-}
+};
+
+export default Nav;

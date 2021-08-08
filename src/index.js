@@ -3,10 +3,15 @@ import ReactDom from "react-dom";
 import "./index.css";
 import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
+import styled from "styled-components";
+
+const BodyDiv = styled.div`
+  background-color: ${(props) => props.theme.pageBackground};
+`;
 
 ReactDom.render(
-  <div>
+  <BodyDiv>
     <App />
-  </div>,
+  </BodyDiv>,
   document.getElementById("root")
 );

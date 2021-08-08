@@ -4,7 +4,7 @@ import { HiMoon } from "react-icons/hi";
 import Banner from "./Banner";
 
 const Toggle = styled.button`
-  background-color: ${(props) => props.theme.titleColor};
+  background-color: ${(props) => props.theme.tagLineColor};
   color: ${(props) => props.theme.pageBackground};
   &:focus {
     outline: none;
@@ -12,13 +12,13 @@ const Toggle = styled.button`
 `;
 
 const Page = styled.div`
-  background-color: ${(props) => props.theme.pageBackground};
+  ${"" /* background-color: ${(props) => props.theme.pageBackground}; */}
 `;
 
 const Container = styled.div``;
 
 const Title = styled.h1`
-  color: ${(props) => props.theme.titleColor};
+  ${"" /* color: ${(props) => props.theme.titleColor}; */}
   ${"" /* className="transition duration-200 ease-in-out" */}
 `;
 
@@ -45,7 +45,7 @@ export default function Splash(props) {
     );
 
   return (
-    <Page className="flex w-full transition duration-200 ease-in">
+    <div>
       <Container className="flex flex-col items-center">
         <Toggle
           onClick={changeTheme}
@@ -55,6 +55,6 @@ export default function Splash(props) {
         </Toggle>
       </Container>
       <Banner />
-    </Page>
+    </div>
   );
 }
