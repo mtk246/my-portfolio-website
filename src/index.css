@@ -4,6 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 @layer base {
+    @font-face {
+        font-family: "Lato";
+        font-weight: 700;
+        src: url(assets/fonts/Lato-Bold.ttf) format("ttf");
+    }
+    @font-face {
+        font-family: "DancingScript";
+        font-weight: 700;
+        src: url(assets/fonts/DancingScript-Bold.ttf) format("ttf")
+    }
     h1 {
         @apply text-2xl;
     }
@@ -15,14 +25,14 @@
 
 @layer components {}
 
+div, h1, p {
+    transition: 1s ease;
+}
+
 @media(max-width:768px) {
     .list-navbar {
         display: none;
     }
-}
-
-h1, p {
-    transition: 1.5s ease;
 }
 
 .banner-div-animation {

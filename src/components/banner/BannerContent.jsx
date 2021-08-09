@@ -1,20 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import { HiOutlineChevronDoubleDown } from "react-icons/hi";
 
-const BannerDiv = styled.div`
-  background-color: ${(props) => props.theme.pageBackground};
-  transition: 1s ease;
-`;
-
-const BannerHeadingTitle = styled.h1`
-  color: ${(props) => props.theme.bannerHeadingTitle};
-`;
-
-const BannerHeadingName = styled.p`
-  color: ${(props) => props.theme.bannerHeadingName};
-  line-height: 1.5;
-`;
+import { BannerDiv, BannerHeadingTitle, BannerHeadingName } from "../const";
 
 export default function BannerContent() {
   return (
@@ -23,7 +10,7 @@ export default function BannerContent() {
         <BannerHeadingTitle className="text-xl md:text-4xl text-left uppercase">
           I am
         </BannerHeadingTitle>
-        <BannerHeadingName className="banner-heading-name text-5xl md:text-7xl xl:text-9xl font-extrabold text-center md:text-left">
+        <BannerHeadingName className="banner-heading-name font-serif text-5xl md:text-7xl xl:text-9xl font-extrabold text-center md:text-left">
           Min Thu Kyaw
         </BannerHeadingName>
         <BannerHeadingTitle className="text-xl md:text-4xl text-left uppercase">

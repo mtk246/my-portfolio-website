@@ -1,25 +1,10 @@
-import styled from "styled-components";
-
-const BodyBackground = styled.div`
-  background-color: ${(props) => props.theme.bodyBackground};
-`;
-
-const ContactMeBackground = styled.div`
-  background-color: ${(props) => props.theme.contactMeBackground};
-`;
-
-const HeadingColor = styled.h1`
-  color: ${(props) => props.theme.normalTextColor};
-`;
-
-const ParagraphColor = styled.p`
-  color: ${(props) => props.theme.normalTextColor};
-`;
-
-const ButtonBackground = styled.div`
-  background: ${(props) => props.theme.buttonBackground};
-  color: ${(props) => props.theme.headingTextColor};
-`;
+import {
+  BodyBackground,
+  AboutMeBackground,
+  HeadingColor,
+  ParagraphColor,
+  ButtonBackground,
+} from "./const";
 
 function Button(props) {
   return (
@@ -31,16 +16,14 @@ function Button(props) {
 
 export default function BodyContent() {
   return (
-    <BodyBackground className="w-full h-auto mx-auto py-10 md:py-16 px-10 md:px-16 flex flex-col lg:flex-row-reverse items-center">
-      <div className="m-auto">
-        <img
-          src="https://www.wallpapertip.com/wmimgs/200-2009039_mountain-wallpaper-1920x1080.jpg"
-          className="shadow rounded-full w-40 h-40 mb-3 ml-3"
-          alt=""
-        />
-      </div>
+    <BodyBackground className="w-full h-auto mx-auto py-10 md:py-16 px-10 md:px-16 flex flex-col lg:flex-row-reverse items-baseline lg:items-center">
+      <img
+        src="https://www.wallpapertip.com/wmimgs/200-2009039_mountain-wallpaper-1920x1080.jpg"
+        className="shadow rounded-full w-40 h-40 mb-3 ml-3"
+        alt=""
+      />
 
-      <ContactMeBackground className="w-9/12 rounded-2xl flex flex-col justify-around px-10 py-10 shadow">
+      <AboutMeBackground className="w-9/12 rounded-2xl flex flex-col justify-around px-10 py-10 shadow">
         <HeadingColor className="font-extrabold">about me</HeadingColor>
         <ParagraphColor className="paragraph-body w-4/6">
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -52,7 +35,7 @@ export default function BodyContent() {
           <Button name="Contact me" />
           <Button name="View my CV" />
         </div>
-      </ContactMeBackground>
+      </AboutMeBackground>
     </BodyBackground>
   );
 }
