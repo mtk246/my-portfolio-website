@@ -29,7 +29,7 @@ const Nav = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="w-full flex justify-around font-semibold pt-8">
+    <nav className="w-full flex justify-around font-semibold pt-8 absolute">
       <H1 className="font-extrabold">MTK</H1>
       <ButtonDiv className="md:hidden sm:flex w-12 h-12 rounded-full justify-end">
         <Button

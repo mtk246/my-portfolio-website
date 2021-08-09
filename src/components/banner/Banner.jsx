@@ -1,4 +1,4 @@
-import Nav from "./Nav";
+import Nav from "../Nav";
 import BannerContent from "./BannerContent";
 
 export default function Banner() {

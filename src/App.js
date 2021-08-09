@@ -7,9 +7,12 @@ const LightTheme = {
   titleColor: "#fff",
   headingTextColor: "#fff",
   tagLineColor: "#fff",
-  normalTextColor: "#E23D55",
+  normalTextColor: "#595260",
   bannerHeadingTitle: "#fff",
   bannerHeadingName: "#4DD0E1",
+  bodyBackground: "#C7D2FE",
+  contactMeBackground: "#fff",
+  buttonBackground: "#E23D55",
 };
 
 const DarkTheme = {
@@ -17,8 +20,12 @@ const DarkTheme = {
   titleColor: "#595260",
   headingTextColor: "#FFD523",
   tagLineColor: "#a4a4a5",
+  normalTextColor: "#BFDBFE",
   bannerHeadingTitle: "#bfdbfe",
   bannerHeadingName: "#FFD523",
+  bodyBackground: "#3e404f",
+  contactMeBackground: "#2C2E43",
+  buttonBackground: "#3e404f",
 };
 
 const themes = {

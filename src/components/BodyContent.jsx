@@ -1,0 +1,58 @@
+import styled from "styled-components";
+
+const BodyBackground = styled.div`
+  background-color: ${(props) => props.theme.bodyBackground};
+`;
+
+const ContactMeBackground = styled.div`
+  background-color: ${(props) => props.theme.contactMeBackground};
+`;
+
+const HeadingColor = styled.h1`
+  color: ${(props) => props.theme.normalTextColor};
+`;
+
+const ParagraphColor = styled.p`
+  color: ${(props) => props.theme.normalTextColor};
+`;
+
+const ButtonBackground = styled.div`
+  background: ${(props) => props.theme.buttonBackground};
+  color: ${(props) => props.theme.headingTextColor};
+`;
+
+function Button(props) {
+  return (
+    <ButtonBackground className="flex-initial p-3 mx-2 rounded-lg shadow font-bold tracking-widest cursor-pointer">
+      {props.name}
+    </ButtonBackground>
+  );
+}
+
+export default function BodyContent() {
+  return (
+    <BodyBackground className="w-full h-auto mx-auto py-10 md:py-16 px-10 md:px-16 flex flex-col lg:flex-row-reverse items-center">
+      <div className="m-auto">
+        <img
+          src="https://www.wallpapertip.com/wmimgs/200-2009039_mountain-wallpaper-1920x1080.jpg"
+          className="shadow rounded-full w-40 h-40 mb-3 ml-3"
+          alt=""
+        />
+      </div>
+
+      <ContactMeBackground className="w-9/12 rounded-2xl flex flex-col justify-around px-10 py-10 shadow">
+        <HeadingColor className="font-extrabold">about me</HeadingColor>
+        <ParagraphColor className="paragraph-body w-4/6">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </ParagraphColor>
+        <div className="flex mt-4">
+          <Button name="Contact me" />
+          <Button name="View my CV" />
+        </div>
+      </ContactMeBackground>
+    </BodyBackground>
+  );
+}

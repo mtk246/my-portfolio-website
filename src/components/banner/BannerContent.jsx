@@ -2,6 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { HiOutlineChevronDoubleDown } from "react-icons/hi";
 
+const BannerDiv = styled.div`
+  background-color: ${(props) => props.theme.pageBackground};
+  transition: 1s ease;
+`;
+
 const BannerHeadingTitle = styled.h1`
   color: ${(props) => props.theme.bannerHeadingTitle};
 `;
@@ -13,22 +18,22 @@ const BannerHeadingName = styled.p`
 
 export default function BannerContent() {
   return (
-    <div className="banner-div-animation w-full flex items-center md:px-5">
+    <BannerDiv className="banner-div-animation w-full flex items-center md:px-5 bg-red-500 h-screen">
       <div className="text-center my-40 mx-auto">
-        <BannerHeadingTitle className="text-xl md:text-4xl text-left">
-          I'm
+        <BannerHeadingTitle className="text-xl md:text-4xl text-left uppercase">
+          I am
         </BannerHeadingTitle>
-        <BannerHeadingName className="banner-heading-name text-5xl md:text-7xl xl:text-9xl font-extrabold text-center md:text-left ">
+        <BannerHeadingName className="banner-heading-name text-5xl md:text-7xl xl:text-9xl font-extrabold text-center md:text-left">
           Min Thu Kyaw
         </BannerHeadingName>
-        <BannerHeadingTitle className="text-xl md:text-4xl text-left">
+        <BannerHeadingTitle className="text-xl md:text-4xl text-left uppercase">
           Full Stack Web & Flutter Developer
         </BannerHeadingTitle>
         <div className="animate-bounce text-sm text-white text-center absolute bottom-4 left-1/2 flex flex-col items-center">
           Scroll for more
-          <HiOutlineChevronDoubleDown className="bounce-arrow-icon text-2xl" />
+          <HiOutlineChevronDoubleDown className="bounce-arrow-icon text-2xl uppercase" />
         </div>
       </div>
-    </div>
+    </BannerDiv>
   );
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { CgSun } from "react-icons/cg";
-import { HiMoon } from "react-icons/hi";
-import Banner from "./Banner";
+import { HiOutlineLightBulb, HiOutlineMoon } from "react-icons/hi";
+import Banner from "./banner/Banner";
+import BodyContent from "./BodyContent";
 
 const Toggle = styled.button`
   background-color: ${(props) => props.theme.tagLineColor};
@@ -29,8 +29,10 @@ const TagLine = styled.span`
 `;
 
 const BannerDiv = styled.div`
-  background-color: ${(props) => props.theme.pageBackground};
-  transition: 1s ease;
+  ${
+    "" /* background-color: ${(props) => props.theme.pageBackground};
+  transition: 1s ease; */
+  }
 `;
 
 export default function Splash(props) {
@@ -44,13 +46,13 @@ export default function Splash(props) {
 
   const icon =
     props.theme === "light" ? (
-      <HiMoon size={30} className="mx-auto" />
+      <HiOutlineMoon size={30} className="mx-auto" />
     ) : (
-      <CgSun size={30} className="mx-auto" />
+      <HiOutlineLightBulb size={30} className="mx-auto" />
     );
 
   return (
-    <BannerDiv className="h-screen">
+    <BannerDiv>
       <Container className="flex flex-col items-center">
         <Toggle
           onClick={changeTheme}
@@ -60,6 +62,7 @@ export default function Splash(props) {
         </Toggle>
       </Container>
       <Banner />
+      <BodyContent />
     </BannerDiv>
   );
 }
