@@ -1,14 +1,11 @@
 import Nav from "./Nav";
-import styled from "styled-components";
-
-const BannerDiv = styled.div`
-  background-color: ${(props) => props.theme.pageBackground};
-`;
+import BannerContent from "./BannerContent";
 
 export default function Banner() {
   return (
-    <BannerDiv className="h-screen">
+    <div>
       <Nav />
-    </BannerDiv>
+      <BannerContent />
+    </div>
   );
 }

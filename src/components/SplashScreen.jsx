@@ -28,6 +28,10 @@ const TagLine = styled.span`
   transition: all 0.5s ease;
 `;
 
+const BannerDiv = styled.div`
+  background-color: ${(props) => props.theme.pageBackground};
+`;
+
 export default function Splash(props) {
   function changeTheme() {
     if (props.theme === "light") {
@@ -45,7 +49,7 @@ export default function Splash(props) {
     );
 
   return (
-    <div>
+    <BannerDiv className="h-screen">
       <Container className="flex flex-col items-center">
         <Toggle
           onClick={changeTheme}
@@ -55,6 +59,6 @@ export default function Splash(props) {
         </Toggle>
       </Container>
       <Banner />
-    </div>
+    </BannerDiv>
   );
 }
