@@ -8,6 +8,8 @@ const LightTheme = {
   headingTextColor: "#fff",
   tagLineColor: "#fff",
   normalTextColor: "#E23D55",
+  bannerHeadingTitle: "#fff",
+  bannerHeadingName: "#4DD0E1",
 };
 
 const DarkTheme = {
@@ -15,6 +17,8 @@ const DarkTheme = {
   titleColor: "#595260",
   headingTextColor: "#FFD523",
   tagLineColor: "#a4a4a5",
+  bannerHeadingTitle: "#bfdbfe",
+  bannerHeadingName: "#FFD523",
 };
 
 const themes = {

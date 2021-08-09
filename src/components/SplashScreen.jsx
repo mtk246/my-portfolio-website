@@ -30,6 +30,7 @@ const TagLine = styled.span`
 
 const BannerDiv = styled.div`
   background-color: ${(props) => props.theme.pageBackground};
+  transition: 1s ease;
 `;
 
 export default function Splash(props) {
