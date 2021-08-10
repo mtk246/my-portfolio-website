@@ -2,8 +2,8 @@ import { BodyContent, HeadingColor, ParagraphColor } from "../const";
 
 export default function Skills() {
   return (
-    <div className="flex flex-col lg:flex-row ">
-      <BodyContent className="body-content flex flex-col shadow ">
+    <div className="flex flex-col lg:flex-row my-10 items-center">
+      <BodyContent className="body-content flex flex-col shadow">
         <HeadingColor className="font-extrabold tracking-wider">
           skill
         </HeadingColor>

@@ -15,7 +15,7 @@ function Button(props) {
 
 export default function AboutMe() {
   return (
-    <BodyContent className="body-content flex flex-col justify-around shadow m-auto">
+    <BodyContent className="body-content flex flex-col items-center lg:items-start justify-around shadow m-auto">
       <img
         src="https://www.wallpapertip.com/wmimgs/200-2009039_mountain-wallpaper-1920x1080.jpg"
         id="profileId"
