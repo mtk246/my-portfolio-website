@@ -25,7 +25,7 @@ export default function AboutMe() {
       <HeadingColor className="font-extrabold tracking-wider">
         about me
       </HeadingColor>
-      <ParagraphColor className="paragraph-body w-4/6">
+      <ParagraphColor className="paragraph-body w-4/6 my-3">
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and

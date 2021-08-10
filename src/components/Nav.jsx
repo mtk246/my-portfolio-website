@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { H1, ButtonDiv, CardBodyUl, NormalText } from "./const";
 import { Collapse, Button, CardBody, Card } from "reactstrap";
-import MenuOutlinedIcon from "@material-ui/icons/MenuOutlined";
-import CloseIcon from "@material-ui/icons/Close";
+import { HiOutlineXCircle, HiOutlineMenu } from "react-icons/hi";
 
-const Nav = (props) => {
+function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -12,24 +11,23 @@ const Nav = (props) => {
   return (
     <nav className="w-full flex justify-around font-semibold pt-8 absolute">
       <H1 className="font-extrabold font-sans">MTK</H1>
-      <ButtonDiv className="md:hidden sm:flex w-12 h-12 rounded-full justify-end">
-        <Button
-          color="none"
-          onClick={toggle}
-          style={{ margin: 0, position: "absolute" }}
-        >
-          {!isOpen ? <MenuOutlinedIcon /> : <CloseIcon />}
+      <ButtonDiv className="md:hidden flex flex-col w-12 h-12 items-center">
+        <Button color="none" onClick={toggle}>
+          {!isOpen ? (
+            <HiOutlineMenu className="w-6 h-6" />
+          ) : (
+            <HiOutlineXCircle className="w-6 h-6" />
+          )}
         </Button>
         <Collapse isOpen={isOpen}>
           <Card
             style={{
               border: "none",
               backgroundColor: "transparent",
-              marginTop: "2rem",
             }}
           >
             <CardBody>
-              <CardBodyUl className="block text-lg float-right w-max px-14 py-5 rounded-xl">
+              <CardBodyUl className=" text-lg float-right w-max px-14 py-5 rounded-xl">
                 <NormalText>Home</NormalText>
                 <NormalText>About</NormalText>
                 <NormalText>Skills</NormalText>
@@ -51,6 +49,6 @@ const Nav = (props) => {
       </div>
     </nav>
   );
-};
+}
 
 export default Nav;

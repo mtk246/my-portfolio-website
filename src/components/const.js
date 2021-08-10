@@ -10,7 +10,7 @@ const LightTheme = {
   bannerHeadingTitle: "#fff",
   bannerHeadingName: "#4DD0E1",
   bodyBackground: "#C7D2FE",
-  contactMeBackground: "#fff",
+  bodyContentBackground: "#fff",
   buttonBackground: "#E23D55",
 };
 
@@ -24,7 +24,7 @@ const DarkTheme = {
   bannerHeadingTitle: "#bfdbfe",
   bannerHeadingName: "#FFD523",
   bodyBackground: "#292e49",
-  contactMeBackground: "#2C2E43",
+  bodyContentBackground: "#2C2E43",
   buttonBackground: "#3e404f",
 };
 
@@ -45,12 +45,12 @@ const H1 = styled.h1`
 `;
 
 const ButtonDiv = styled.div`
-  background-color: ${(props) => props.theme.tagLineColor};
+  color: ${(props) => props.theme.tagLineColor};
   ${"" /* transition: 0.5s ease; */}
 `;
 
 const CardBodyUl = styled.ul`
-  background-color: ${(props) => props.theme.tagLineColor};
+  background-color: #2c2e43;
 `;
 
 const NormalText = styled.li`
@@ -87,7 +87,7 @@ const BodySection = styled.div`
 `;
 
 const BodyContent = styled.div`
-  background-color: ${(props) => props.theme.contactMeBackground};
+  background-color: ${(props) => props.theme.bodyContentBackground};
 `;
 
 const HeadingColor = styled.h1`
