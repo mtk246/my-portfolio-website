@@ -1,6 +1,6 @@
 import { HiOutlineLightBulb, HiOutlineMoon } from "react-icons/hi";
 import Banner from "./banner/Banner";
-import BodyContent from "./BodyContent";
+import BodyWrapper from "./BodyWrapper";
 import { Toggle } from "./const";
 
 export default function Splash(props) {
@@ -25,7 +25,7 @@ export default function Splash(props) {
         </Toggle>
       </div>
       <Banner />
-      <BodyContent />
+      <BodyWrapper />
     </div>
   );
 }

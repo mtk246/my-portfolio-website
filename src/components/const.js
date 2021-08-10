@@ -15,7 +15,7 @@ const LightTheme = {
 };
 
 const DarkTheme = {
-  pageBackground: "#2C2E43",
+  pageBackground: "#232535",
   titleColor: "#595260",
   headingTextColor: "#FFD523",
   tagLineColor: "#FFD523",
@@ -23,7 +23,7 @@ const DarkTheme = {
   normalText2Color: "#C7D2FE",
   bannerHeadingTitle: "#bfdbfe",
   bannerHeadingName: "#FFD523",
-  bodyBackground: "#3e404f",
+  bodyBackground: "#292e49",
   contactMeBackground: "#2C2E43",
   buttonBackground: "#3e404f",
 };
@@ -82,11 +82,11 @@ const BannerHeadingName = styled.p`
 
 /// From BodyContent.jsx ///
 
-const BodyBackground = styled.div`
+const BodySection = styled.div`
   background-color: ${(props) => props.theme.bodyBackground};
 `;
 
-const AboutMeBackground = styled.div`
+const BodyContent = styled.div`
   background-color: ${(props) => props.theme.contactMeBackground};
 `;
 
@@ -115,8 +115,8 @@ export {
   BannerDiv,
   BannerHeadingTitle,
   BannerHeadingName,
-  BodyBackground,
-  AboutMeBackground,
+  BodySection,
+  BodyContent,
   HeadingColor,
   ParagraphColor,
   ButtonBackground,
