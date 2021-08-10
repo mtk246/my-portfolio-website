@@ -3,7 +3,7 @@ import BannerContent from "./BannerContent";
 
 export default function Banner() {
   return (
-    <div>
+    <div className="banner">
       <Nav />
       <BannerContent />
     </div>

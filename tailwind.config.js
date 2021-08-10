@@ -5,7 +5,6 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Lato", "sans-serif"],
-        serif: ["DancingScript", "serif"],
       },
     },
   },

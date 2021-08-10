@@ -10,7 +10,7 @@ export default function BannerContent() {
         <BannerHeadingTitle className="text-xl md:text-4xl text-left uppercase">
           I am
         </BannerHeadingTitle>
-        <BannerHeadingName className="banner-heading-name font-serif text-5xl md:text-7xl xl:text-9xl font-extrabold text-center md:text-left">
+        <BannerHeadingName className="banner-heading-name font-sans text-5xl md:text-7xl xl:text-9xl font-extrabold text-center md:text-left">
           Min Thu Kyaw
         </BannerHeadingName>
         <BannerHeadingTitle className="text-xl md:text-4xl text-left uppercase">
