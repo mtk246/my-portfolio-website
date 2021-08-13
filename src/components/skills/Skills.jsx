@@ -1,50 +1,9 @@
-import { BodyContent, HeadingColor, ParagraphColor } from "../const";
-
-function SkillComponent(props) {
-  const style1 = { width: props.progress1 + "%" };
-  const style2 = { width: props.progress2 + "%" };
-  const style3 = { width: props.progress3 + "%" };
-
-  function SkillBarDiv() {
-    return (
-      <div className="flex flex-col w-full flex-1 my-4 lg:my-0">
-        <div className="grid grid-cols-1 grid-rows-3 gap-4">
-          <div className="relative w-full rounded m-auto flex flex-col md:flex-row items-start md:items-center px-0 md:px-8">
-            <h1 className="text-xl mx-4">{props.skillName1}</h1>{" "}
-            <div
-              className="absolute top-0 h-4 rounded shim-red"
-              style={style1}
-            ></div>
-          </div>
-          <div className="relative w-full rounded m-auto flex flex-col md:flex-row items-start md:items-center px-0 md:px-8">
-            <h1 className="text-xl mx-4">{props.skillName2}</h1>
-            <div
-              className="absolute top-0 h-4 rounded shim-blue"
-              style={style2}
-            ></div>
-          </div>
-          <div class="relative w-full rounded m-auto flex flex-col md:flex-row items-start md:items-center px-0 md:px-8">
-            <h1 className="text-xl mx-4">{props.skillName3}</h1>
-            <div
-              className="absolute top-0 h-4 rounded shim-green"
-              style={style3}
-            ></div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-  return (
-    <BodyContent className="body-content flex flex-col lg:flex-row shadow my-3">
-      <div className="bg-gray-200 rounded-lg p-4 m-auto flex flex-none w-full md:w-1/2 lg:w-1/3">
-        <h1 className="text-black text-lg md:text-xl font-extrabold">
-          {props.skillTitle}
-        </h1>
-      </div>
-      <SkillBarDiv className="ml-3" />
-    </BodyContent>
-  );
-}
+import {
+  BodyContent,
+  HeadingColor,
+  ParagraphColor,
+  SkillComponent,
+} from "../const";
 
 export default function Skills() {
   return (

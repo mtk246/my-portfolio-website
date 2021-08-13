@@ -12,6 +12,7 @@ const LightTheme = {
   bodyBackground: "#C7D2FE",
   bodyContentBackground: "#fff",
   buttonBackground: "#E23D55",
+  skillBarProgressBackgroundColor: "#E23D55",
 };
 
 const DarkTheme = {
@@ -26,6 +27,7 @@ const DarkTheme = {
   bodyBackground: "#292e49",
   bodyContentBackground: "#2C2E43",
   buttonBackground: "#3e404f",
+  skillBarProgressBackgroundColor: "#FFD523",
 };
 
 /// From SplashScreen.jsx ///
@@ -80,7 +82,7 @@ const BannerHeadingName = styled.p`
   line-height: 1.5;
 `;
 
-/// From BodyContent.jsx ///
+/// From AboutMe.jsx ///
 
 const BodySection = styled.div`
   background-color: ${(props) => props.theme.bodyBackground};
@@ -103,6 +105,70 @@ const ButtonBackground = styled.div`
   color: ${(props) => props.theme.headingTextColor};
 `;
 
+/// From AboutMe.jsx ///
+
+const SkillBarProgressDivColor = styled.div`
+  background-color: ${(props) => props.theme.skillBarProgressBackgroundColor};
+`;
+
+function SkillBarProgressDiv(props) {
+  return (
+    <SkillBarProgressDivColor
+      className="absolute top-0 h-4 rounded shim-green"
+      style={props.progressBarStyle}
+    ></SkillBarProgressDivColor>
+  );
+}
+
+function SkillComponent(props) {
+  const style1 = { width: props.progress1 + "%" };
+  const style2 = { width: props.progress2 + "%" };
+  const style3 = { width: props.progress3 + "%" };
+
+  function SkillBarDiv() {
+    return (
+      <div className="flex flex-col w-full flex-1 my-4 lg:my-0">
+        <div className="grid grid-cols-1 grid-rows-3 gap-4">
+          <div className="relative w-full rounded m-auto flex flex-col md:flex-row items-start md:items-center px-0 md:px-8">
+            <HeadingColor className="text-xl mx-4">
+              {props.skillName1}
+            </HeadingColor>
+            <SkillBarProgressDiv
+              progressBarStyle={style1}
+            ></SkillBarProgressDiv>
+          </div>
+          <div className="relative w-full rounded m-auto flex flex-col md:flex-row items-start md:items-center px-0 md:px-8">
+            <HeadingColor className="text-xl mx-4">
+              {props.skillName2}
+            </HeadingColor>
+            <SkillBarProgressDiv
+              progressBarStyle={style2}
+            ></SkillBarProgressDiv>
+          </div>
+          <div class="relative w-full rounded m-auto flex flex-col md:flex-row items-start md:items-center px-0 md:px-8">
+            <HeadingColor className="text-xl mx-4">
+              {props.skillName3}
+            </HeadingColor>
+            <SkillBarProgressDiv
+              progressBarStyle={style3}
+            ></SkillBarProgressDiv>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  return (
+    <BodyContent className="body-content flex flex-col lg:flex-row shadow my-3">
+      <div className="rounded-lg p-4 m-auto flex flex-none w-full md:w-1/2 lg:w-1/3">
+        <HeadingColor className="text-lg md:text-xl font-extrabold">
+          {props.skillTitle}
+        </HeadingColor>
+      </div>
+      <SkillBarDiv className="ml-3" />
+    </BodyContent>
+  );
+}
+
 export {
   LightTheme,
   DarkTheme,
@@ -120,4 +186,6 @@ export {
   HeadingColor,
   ParagraphColor,
   ButtonBackground,
+  SkillComponent,
+  SkillBarProgressDiv,
 };
