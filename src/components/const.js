@@ -13,6 +13,7 @@ const LightTheme = {
   bodyContentBackground: "#fff",
   buttonBackground: "#E23D55",
   skillBarProgressBackgroundColor: "#E23D55",
+  iconColor: "#4B5563",
 };
 
 const DarkTheme = {
@@ -28,6 +29,7 @@ const DarkTheme = {
   bodyContentBackground: "#2C2E43",
   buttonBackground: "#3e404f",
   skillBarProgressBackgroundColor: "#FFD523",
+  iconColor: "#c4c4c4",
 };
 
 /// From SplashScreen.jsx ///
@@ -111,6 +113,10 @@ const SkillBarProgressDivColor = styled.div`
   background-color: ${(props) => props.theme.skillBarProgressBackgroundColor};
 `;
 
+const IconDiv = styled.div`
+  color: ${(props) => props.theme.iconColor};
+`;
+
 function SkillBarProgressDiv(props) {
   return (
     <SkillBarProgressDivColor
@@ -188,4 +194,5 @@ export {
   ButtonBackground,
   SkillComponent,
   SkillBarProgressDiv,
+  IconDiv,
 };

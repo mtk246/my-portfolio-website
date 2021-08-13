@@ -3,23 +3,68 @@ import {
   HeadingColor,
   ParagraphColor,
   SkillComponent,
+  IconDiv,
 } from "../const";
+import {
+  DiDart,
+  DiReact,
+  DiWordpress,
+  DiPhotoshop,
+  DiPython,
+  DiIllustrator,
+  DiMongodb,
+  DiPhp,
+} from "react-icons/di";
+
+import { SiAdobeaftereffects } from "react-icons/si";
 
 export default function Skills() {
   return (
     <div className="flex flex-col my-10 items-center">
-      <BodyContent className="body-content w-3/4 lg:w-1/2 flex-col shadow mx-4">
-        <HeadingColor className="font-extrabold tracking-wider">
-          skill
-        </HeadingColor>
-        <ParagraphColor className="paragraph-body w-4/6 my-3">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
-        </ParagraphColor>
-      </BodyContent>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-3/4 lg:w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <BodyContent className="body-content w-3/4 lg:w-full flex flex-col items-center lg:items-start shadow m-auto">
+          <HeadingColor className="font-extrabold tracking-wider">
+            skill
+          </HeadingColor>
+          <ParagraphColor className="paragraph-body w-4/6 my-3">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </ParagraphColor>
+        </BodyContent>
+        <BodyContent className="body-content w-3/4 lg:w-full m-auto grid grid-flow-row grid-cols-3 grid-rows-3 gap-4 items-center bg-transparent">
+          <IconDiv>
+            <DiDart className="m-auto w-16 h-16" />
+          </IconDiv>
+          <IconDiv>
+            <DiReact className="m-auto w-16 h-16" />
+          </IconDiv>
+          <IconDiv>
+            <DiWordpress className="m-auto w-16 h-16 " />
+          </IconDiv>
+          <IconDiv>
+            <DiPhotoshop className="m-auto w-16 h-16" />
+          </IconDiv>
+          <IconDiv>
+            <DiIllustrator className="m-auto w-16 h-16 " />
+          </IconDiv>
+          <IconDiv>
+            <DiPython className="m-auto w-16 h-16 " />
+          </IconDiv>
+          <IconDiv>
+            <SiAdobeaftereffects className="m-auto w-16 h-16 " />
+          </IconDiv>
+          <IconDiv>
+            <DiMongodb className="m-auto w-16 h-16 " />
+          </IconDiv>
+          <IconDiv>
+            <DiPhp className="m-auto w-16 h-16" />
+          </IconDiv>
+        </BodyContent>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-3/4 lg:w-full">
         <SkillComponent
           skillTitle="develop"
           skillName1="web"
