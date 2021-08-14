@@ -1,7 +1,25 @@
 import React from "react";
-import { HiOutlineChevronDoubleDown } from "react-icons/hi";
+import styled from "styled-components";
+import {
+  FaFacebook,
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaTwitter,
+} from "react-icons/fa";
 
 import { BannerDiv, BannerHeadingTitle, BannerHeadingName } from "../const";
+
+function BannerIcon(props) {
+  return (
+    <a
+      href={props.link}
+      className="banner-icon border-2 border-gray-200 rounded-full p-2"
+    >
+      {props.iconName}
+    </a>
+  );
+}
 
 export default function BannerContent() {
   return (
@@ -16,9 +34,12 @@ export default function BannerContent() {
         <BannerHeadingTitle className="text-xl md:text-4xl text-left uppercase">
           Full Stack Web & Flutter Developer
         </BannerHeadingTitle>
-        <div className="animate-bounce text-sm text-white text-center absolute bottom-4 left-1/2 flex flex-col items-center">
-          Scroll for more
-          <HiOutlineChevronDoubleDown className="bounce-arrow-icon text-2xl uppercase" />
+        <div className="animate-bounce text-xl text-white text-center absolute bottom-4 grid grid-flow-col gap-3">
+          <BannerIcon link="#" iconName={<FaGithub />} />
+          <BannerIcon link="#" iconName={<FaFacebook />} />
+          <BannerIcon link="#" iconName={<FaLinkedin />} />
+          <BannerIcon link="#" iconName={<FaInstagram />} />
+          <BannerIcon link="#" iconName={<FaTwitter />} />
         </div>
       </div>
     </BannerDiv>

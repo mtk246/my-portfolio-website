@@ -20,7 +20,7 @@ import { SiAdobeaftereffects } from "react-icons/si";
 
 export default function Skills() {
   return (
-    <div className="flex flex-col my-10 items-center">
+    <div className="flex flex-col mx-auto w-full lg:w-3/4 items-center">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <BodyContent className="body-content w-3/4 lg:w-full flex flex-col items-center lg:items-start shadow m-auto">
           <HeadingColor className="font-extrabold tracking-wider">
@@ -64,15 +64,32 @@ export default function Skills() {
         </BodyContent>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-3/4 lg:w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 my-4 w-3/4 lg:w-full justify-items-center">
         <SkillComponent
-          skillTitle="develop"
-          skillName1="web"
-          skillName2="flutter"
+          skillTitle="web development"
+          skillName1="html & css"
+          skillName2="nodeJS & mongoDB"
           skillName3="react"
           progress1={100}
           progress2={40}
           progress3={75}
+        />
+        <SkillComponent
+          skillTitle="mobile development"
+          skillName1="flutter"
+          skillName2="react native"
+          progress1={60}
+          progress2={80}
+          progress3={0}
+        />
+        <SkillComponent
+          skillTitle="programming"
+          skillName1="java"
+          skillName2="python"
+          skillName3="c++"
+          progress1={60}
+          progress2={100}
+          progress3={80}
         />
         <SkillComponent
           skillTitle="design and editing"
@@ -82,7 +99,7 @@ export default function Skills() {
           progress1={60}
           progress2={80}
           progress3={35}
-        />
+        />{" "}
       </div>
     </div>
   );
