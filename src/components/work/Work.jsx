@@ -36,6 +36,10 @@ export default function Work() {
               <h1 className="py-3"> Furniture Website with PHP</h1>
               <img src="https://picsum.photos/300" alt="" className="mx-auto" />
             </div>
+            <div className="transform-gpu -rotate-12">
+              <h1 className="py-3"> Furniture Website with PHP</h1>
+              <img src="https://picsum.photos/300" alt="" className="mx-auto" />
+            </div>
           </div>
         </div>
       </BodyContent>
