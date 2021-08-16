@@ -3,18 +3,18 @@ import Splash from "./components/SplashScreen";
 import { ThemeProvider } from "styled-components";
 
 const LightTheme = {
-  pageBackground: "#F6ECF0",
-  titleColor: "#A7C5EB",
-  headingTextColor: "#949CDF",
-  tagLineColor: "#949CDF",
-  normalTextColor: "#eaeaea",
+  pageBackground: "#E23D55",
+  titleColor: "#fff",
+  headingTextColor: "#fff",
+  tagLineColor: "#fff",
+  normalTextColor: "#E23D55",
 };
 
 const DarkTheme = {
   pageBackground: "#2C2E43",
   titleColor: "#595260",
   headingTextColor: "#FFD523",
-  tagLineColor: "#B2B1B9",
+  tagLineColor: "#a4a4a5",
 };
 
 const themes = {
