@@ -27,7 +27,7 @@
 
 body {}
 
-div, h1, p, ul, li, button {
+div, h1, p, ul, li, button, img {
     transition: 1s ease;
 }
 
